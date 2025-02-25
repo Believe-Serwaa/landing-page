@@ -27,7 +27,7 @@ const HealthImpactPage = () => {
           {/* <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-700 mb-3">
             Transforming Public Health
           </h1> */}
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold italic text-blue-900">
+          <h2 className="text-4xl sm:text-3xl md:text-4xl font-bold text-gray-700">
   The Impact of IoT-Enabled Veronica Buckets
 </h2>
 

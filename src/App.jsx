@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import ContactForm from './pages/ContactForm';
 import ImpactPage from './pages/ImpactPage';
 import Features from './pages/Features';
+import AboutUs from './pages/AboutUs';
 
 function App() {
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path:"features",
     element:<Features/>,
+  },
+  {
+    path:"about",
+    element:<AboutUs/>,
   },
 ]);
 
