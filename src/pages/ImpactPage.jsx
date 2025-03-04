@@ -1,169 +1,106 @@
+"use client";
 import React from "react";
-import { Check, Droplet } from "lucide-react";
-import RootLayout from "../layouts/RootLayout";
+import { motion } from "framer-motion";
+import { ShieldCheck, Droplets, Smartphone, PieChart as ChartPie, HeartPulse, Leaf, Target } from "lucide-react";
 
-const FaucetIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    strokeWidth={2}
-    stroke="currentColor"
-    className="text-cyan-600 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14"
+const ImpactCard = ({ title, icon, description, bgColor, textColor }) => (
+  <motion.div
+    className={`p-6 rounded-3xl shadow-2xl transform transition duration-300 hover:-translate-y-2 hover:shadow-xl ${bgColor} ${textColor}`}
+    initial={{ opacity: 0, scale: 0.9 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5 }}
   >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M4 8h16M7 8V4h10v4m-3 4v6h2l-3 3-3-3h2v-6M5 20h14"
-    />
-  </svg>
+    <div className="flex flex-col items-center text-center">
+      <div className="mb-4 p-4 rounded-full bg-white/20">
+        {React.cloneElement(icon, { className: "w-8 h-8 sm:w-10 sm:h-10" })}
+      </div>
+      <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">{title}</h3>
+      <p className="text-sm sm:text-base opacity-80">{description}</p>
+    </div>
+  </motion.div>
 );
 
-const HealthImpactPage = () => {
+const ImpactPage = () => {
   return (
-    <RootLayout>
-      <div className="min-h-screen flex flex-col bg-gray-50 py-16 px-4 md:px-8 pt-32">
-        <header className="max-w-6xl mx-auto text-center mb-12">
-          {/* <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-700 mb-3">
-            Transforming Public Health
-          </h1> */}
-          <h2 className="text-4xl sm:text-3xl md:text-4xl font-bold text-gray-700">
-  The Impact of IoT-Enabled Veronica Buckets
-</h2>
-
-          <p className="mt-4 text-base sm:text-lg text-blue-800">
-            Smart handwashing solutions for healthier communities
+    <section id="impact" className="bg-gradient-to-br from-indigo-50 to-cyan-100 min-h-screen scroll-mt-[6rem] pt-10 pb-20">
+      <div className="container mx-auto px-4">
+        {/* Header Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="text-center mb-8 sm:mb-16"
+        >
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-500 mb-4">
+            Impact of SmartBucket
+          </h1>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+            Transforming hand hygiene through innovative technology and thoughtful design
           </p>
-        </header>
+        </motion.div>
 
-        <main className="max-w-6xl mx-auto">
-          {/* Hero Section */}
-          <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-12 flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 p-4 text-center md:text-left">
-              <h3 className="text-xl sm:text-2xl font-bold text-cyan-800 mb-4">
-                Revolutionizing Hand Hygiene in Public Spaces
-              </h3>
-              <p className="text-gray-700 mb-6">
-                Our IoT-enabled Veronica Buckets combine traditional handwashing
-                with cutting-edge technology to create a powerful tool in the
-                fight against infectious diseases.
-              </p>
-              <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-                <p className="font-semibold text-blue-900 text-sm sm:text-base">
-                  Handwashing with soap can reduce respiratory infections by 21%
-                  and diarrheal diseases by 30% in community settings.
-                </p>
-              </div>
+        {/* Impact Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-16">
+          <ImpactCard
+            title="Health Benefits"
+            icon={<ShieldCheck />}
+            description="Reduces disease transmission by enhancing hand hygiene practices"
+            bgColor="bg-blue-500/10"
+            textColor="text-blue-900"
+          />
+          <ImpactCard
+            title="Environmental Sustainability"
+            icon={<Leaf />}
+            description="Optimizes water usage and promotes eco-friendly solutions"
+            bgColor="bg-green-500/10"
+            textColor="text-green-900"
+          />
+          <ImpactCard
+            title="Smart Monitoring"
+            icon={<Target />}
+            description="Provides real-time insights and automated performance tracking"
+            bgColor="bg-purple-500/10"
+            textColor="text-purple-900"
+          />
+        </div>
+
+        {/* Detailed Impact Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-white/60 rounded-2xl p-6 sm:p-8 shadow-xl"
+          >
+            <div className="flex items-center mb-4 sm:mb-6">
+              <HeartPulse className="w-8 h-8 sm:w-12 sm:h-12 text-blue-600 mr-4" />
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">Public Health</h2>
             </div>
-            <div className="md:w-1/2 p-4 flex justify-center">
-              <div className="w-48 sm:w-56 md:w-64 h-48 sm:h-56 md:h-64 bg-cyan-600 rounded-full flex items-center justify-center shadow-xl">
-                <div className="w-32 sm:w-40 md:w-48 h-32 sm:h-40 md:h-48 bg-white rounded-full flex flex-col items-center justify-center">
-                  <FaucetIcon />
-                  <Droplet className="text-blue-500 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 mt-2" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Benefits Section */}
-          <h3 className="text-2xl font-bold text-center text-blue-800 mb-8">
-            Health Benefits
-          </h3>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {[
-              {
-                title: "Prevents Infectious Diseases",
-                color: "bg-blue-600",
-                benefits: [
-                  "Touchless operation reduces cross-contamination",
-                  "Lowers risk of COVID-19, cholera, and flu",
-                  "Ensures proper handwashing technique",
-                ],
-              },
-              {
-                title: "Encourages Hand Hygiene",
-                color: "bg-cyan-600",
-                benefits: [
-                  "Automated soap and water dispensing",
-                  "Reminders for recommended duration",
-                  "Real-time tracking reinforces good habits",
-                ],
-              },
-              {
-                title: "Reduces Waterborne Diseases",
-                color: "bg-blue-500",
-                benefits: [
-                  "Clean and controlled water flow",
-                  "Minimizes exposure to contaminated sources",
-                  "Reduces diarrhea, typhoid, and dysentery",
-                ],
-              },
-              {
-                title: "Enhances Hygiene in High-Risk Areas",
-                color: "bg-cyan-500",
-                benefits: [
-                  "Ideal for hospitals, schools, and markets",
-                  "Integrates with antibacterial coatings",
-                  "Prevents infections in crowded settings",
-                ],
-              },
-              {
-                title: "Promotes Community Health",
-                color: "bg-blue-700",
-                benefits: [
-                  "Monitors hygiene trends",
-                  "Enables better public health policies",
-                  "Reduces preventable illness healthcare costs",
-                ],
-              },
-            ].map((benefit, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105"
-              >
-                <div className={`${benefit.color} p-4`}>
-                  <h4 className="text-lg sm:text-xl font-bold text-white">
-                    {benefit.title}
-                  </h4>
-                </div>
-                <div className="p-6">
-                  <ul className="space-y-3">
-                    {benefit.benefits.map((text, i) => (
-                      <li key={i} className="flex items-start">
-                        <Check
-                          className="text-green-500 mr-2 flex-shrink-0 mt-1"
-                          size={20}
-                        />
-                        <span>{text}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Call to Action */}
-          <div className="bg-cyan-500 rounded-xl shadow-lg p-8 text-center text-white">
-            <h3 className="text-xl sm:text-2xl font-bold mb-4">
-              Join the Health Revolution
-            </h3>
-            <p className="mb-6 text-sm sm:text-base">
-              Help us bring IoT-enabled Veronica Buckets to more communities and
-              create lasting health impact
+            <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+              Dramatically improves community health by providing accessible handwashing solutions in underserved areas, 
+              significantly reducing the risk of waterborne and communicable diseases.
             </p>
-            <button
-              className="bg-white text-blue-500 font-bold py-3 px-6 sm:px-8 rounded-full hover:bg-blue-50 transition-colors"
-              onClick={() => (window.location.href = "/contact")}
-            >
-              Get Involved Today
-            </button>
-          </div>
-        </main>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white/60 b rounded-2xl p-6 sm:p-8 shadow-xl"
+          >
+            <div className="flex items-center mb-4 sm:mb-6">
+              <ChartPie className="w-8 h-8 sm:w-12 sm:h-12 text-cyan-600 mr-4" />
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">Educational Impact</h2>
+            </div>
+            <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+              Cultivates lifelong hygiene habits by making handwashing engaging and accessible, 
+              with particular focus on educating and empowering children in schools and communities.
+            </p>
+          </motion.div>
+        </div>
       </div>
-    </RootLayout>
+    </section>
   );
 };
 
-export default HealthImpactPage;
+export default ImpactPage;

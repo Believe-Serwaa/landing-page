@@ -109,8 +109,7 @@ function ContactPage() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8, duration: 0.5 }}
               >
-                <p>© {new Date().getFullYear()} Your Company</p>
-                <p>We typically respond within 24 hours</p>
+                
               </motion.div>
             </div>
             

@@ -1,13 +1,16 @@
-html,
 body {
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  height: 100%; /* Ensure body takes full height */
-  width: 100%; /* Ensure body takes full width */
-  background-color: #f8fafc; /* Set a default background color */
-}
-
-#root {
-  min-height: 100vh; /* Ensure the root element takes full height */
-  background-color: #f8fafc; /* Set the same background color for the root */
-}
+    width: auto; /* Remove fixed width */
+    max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+  }
+  
+  #root {
+    width: auto; /* Remove fixed width */
+    max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+  }
+  
+  .container.mx-auto.px-4 {
+    width: auto; /* Remove fixed width */
+    max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+  }
