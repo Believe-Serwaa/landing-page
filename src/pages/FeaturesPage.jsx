@@ -42,9 +42,9 @@ const FeaturesPage = () => {
   return (
     <section
       id="features"
-      className="bg-gradient-to-br from-indigo-50 to-cyan-100 scroll-mt-[6rem] pt-10 pb-20"
+      className="bg-blue-50 scroll-mt-[6rem] pt-10 pb-20"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-7xl">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -52,7 +52,7 @@ const FeaturesPage = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-8 sm:mb-16"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-500 mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-cyan-500 mb-4">
             Innovative Features
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
@@ -93,12 +93,11 @@ const FeaturesPage = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-6xl mx-auto">
-            <div className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white p-6 sm:p-8 text-center">
+            <div className="bg-gradient-to-r from-cyan-600 to-cyan-500 text-white p-6 sm:p-8 text-center">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-                Why <span className="text-white/80">Choose</span> Our Smart
-                Hygiene System?
+                Why <span className="text-white/80">Choose</span> Our SmartBucket?
               </h3>
-              <p className="text-sm sm:text-base text-white/70 max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base text-white/90 max-w-2xl mx-auto">
                 Revolutionizing hygiene with cutting-edge technology that
                 prioritizes safety, efficiency, and user experience.
               </p>
@@ -114,7 +113,7 @@ const FeaturesPage = () => {
                 ></div>
                 <div className="relative bg-white p-6 rounded-2xl shadow-lg text-center h-full">
                   <div
-                    className="bg-blue-100 text-blue-600 w-12 h-12 sm:w-16 sm:h-16 rounded-full 
+                    className="bg-blue-100 text-cyan-600 w-12 h-12 sm:w-16 sm:h-16 rounded-full 
                           flex items-center justify-center mx-auto mb-4
                           transform group-hover:scale-110 transition duration-300"
                   >
@@ -139,7 +138,7 @@ const FeaturesPage = () => {
                 ></div>
                 <div className="relative bg-white p-6 rounded-2xl shadow-lg text-center h-full">
                   <div
-                    className="bg-blue-100 text-blue-600 w-12 h-12 sm:w-16 sm:h-16 rounded-full 
+                    className="bg-blue-100 text-cyan-600 w-12 h-12 sm:w-16 sm:h-16 rounded-full 
                           flex items-center justify-center mx-auto mb-4
                           transform group-hover:scale-110 transition duration-300"
                   >
@@ -164,7 +163,7 @@ const FeaturesPage = () => {
                 ></div>
                 <div className="relative bg-white p-6 rounded-2xl shadow-lg text-center h-full">
                   <div
-                    className="bg-blue-100 text-blue-600 w-12 h-12 sm:w-16 sm:h-16 rounded-full 
+                    className="bg-blue-100 text-cyan-600 w-12 h-12 sm:w-16 sm:h-16 rounded-full 
                           flex items-center justify-center mx-auto mb-4
                           transform group-hover:scale-110 transition duration-300"
                   >

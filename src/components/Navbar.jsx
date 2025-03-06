@@ -39,7 +39,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 text-gray-700 px-6 py-3 rounded-xl ring-2 ring-blue-500 bg-white">
+        <div className="hidden md:flex space-x-8 text-gray-700 px-6 py-3 rounded-xl ring-2 ring-sky-400 bg-white">
           <ul className="flex space-x-8">
             <li>
               <a href="/" className="hover:text-blue-600" onClick={(e) => scrollToSection(e, "home")}>
@@ -65,8 +65,8 @@ const Navbar = () => {
         </div>
 
         {/* Contact Button */}
-        <a href="/contact" className="hidden md:inline-block px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600">
-          Get In Touch
+        <a href="/contact" className="hidden md:inline-block px-6 py-2 text-white bg-sky-400 rounded-lg hover:bg-cyan-500">
+          Get In Touch 
         </a>
 
         {/* Mobile Menu Button */}
@@ -103,7 +103,7 @@ const Navbar = () => {
 
           {/* Mobile Contact Button */}
           <div className="py-4 flex justify-center">
-            <a href="/contact" className="px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600">
+            <a href="/contact" className="px-6 py-2 text-white bg-sky-400 rounded-lg hover:bg-sky-600">
               Get In Touch
             </a>
           </div>

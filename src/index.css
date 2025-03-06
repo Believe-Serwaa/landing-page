@@ -14,3 +14,5 @@ body {
     width: auto; /* Remove fixed width */
     max-width: 100%; /* Ensure it doesn't exceed the viewport width */
   }
+
+  

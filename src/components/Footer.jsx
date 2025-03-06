@@ -25,24 +25,24 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative w-full bg-gradient-to-br from-blue-700 to-cyan-500 text-white py-16">
+    <footer className="relative w-full bg-sky-500 text-white py-16">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Logo and Company Description */}
-          <div className="flex flex-col items-center md:items-start space-y-6">
+          <div className="flex flex-col items-center space-y-6">
             <div className="flex items-center space-x-4">
               <img src={logo} alt="GEOTECH Logo" className="h-16 w-16 rounded-full" />
               <h2 className="text-2xl font-bold">GEOTECH</h2>
             </div>
-            <p className="text-center md:text-left text-white/80 max-w-xs">
+            <p className="text-center text-white/90 max-w-xs">
               Innovative technology solutions driving sustainable development and community empowerment.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div className="flex flex-col items-center md:items-start space-y-6">
+          <div className="flex flex-col items-center space-y-6">
             <h3 className="text-xl font-semibold">Quick Links</h3>
-            <div className="grid grid-cols-2 gap-4 text-white/80">
+            <div className="grid grid-cols-1 gap-4 text-white/90 text-center">
               <a href="/" className="hover:text-white transition" onClick={(e) => scrollToSection(e, "home")}>
                 Home
               </a>
@@ -62,10 +62,10 @@ const Footer = () => {
           </div>
 
           {/* Contact and Social */}
-          <div className="flex flex-col items-center md:items-start space-y-6">
-            <div className="space-y-4 text-center md:text-left">
+          <div className="flex flex-col items-center space-y-6">
+            <div className="space-y-4 text-center">
               <h3 className="text-xl font-semibold">Contact Us</h3>
-              <div className="space-y-2 text-white/80">
+              <div className="space-y-2 text-white/90">
                 <p>Email: gyimart9033@gmail.com</p>
                 <p>Phone: +233 554 799 116</p>
                 <p>Address: Hwidiem, Ahafo Region, Ghana</p>
@@ -73,7 +73,7 @@ const Footer = () => {
             </div>
 
             {/* Social Media Icons */}
-            <div className="flex space-x-6">
+            <div className="flex space-x-6 justify-center">
               <a 
                 href="https://web.facebook.com/profile.php?id=61573212342244" 
                 className="text-white hover:text-blue-200 transition"
@@ -82,19 +82,19 @@ const Footer = () => {
               </a>
               <a 
                 href="https://www.instagram.com/geo_tech01/" 
-                className="text-white hover:text-pink-300 transition"
+                className="text-white hover:text-sky-300 transition"
               >
                 <FaInstagram size={24} />
               </a>
               <a 
                 href="https://www.tiktok.com/@geotech9033?_t=ZM-8u48OS0iRMb&_r=1" 
-                className="text-white hover:text-gray-300 transition"
+                className="text-white hover:text-sky-300 transition"
               >
                 <FaTiktok size={24} />
               </a>
               <a 
                 href="https://wa.me/233554799116" 
-                className="text-white hover:text-green-300 transition"
+                className="text-white hover:text-sky-300 transition"
               >
                 <FaWhatsapp size={24} />
               </a>
@@ -103,7 +103,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright with Decorative Divider */}
-        <div className="mt-6 pt-6 border-t border-white/20 text-center ">
+        <div className="mt-6 pt-6 border-t border-white/20 text-center">
           <p className="text-sm text-white/70">
             © {new Date().getFullYear()} GEOTECH. All Rights Reserved.
           </p>

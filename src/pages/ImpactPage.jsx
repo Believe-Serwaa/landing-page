@@ -1,29 +1,29 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { ShieldCheck, Droplets, Smartphone, PieChart as ChartPie, HeartPulse, Leaf, Target } from "lucide-react";
+import { ShieldCheck, PieChart as ChartPie, HeartPulse, Leaf, TrendingDown } from "lucide-react";
 
 const ImpactCard = ({ title, icon, description, bgColor, textColor }) => (
   <motion.div
-    className={`p-6 rounded-3xl shadow-2xl transform transition duration-300 hover:-translate-y-2 hover:shadow-xl ${bgColor} ${textColor}`}
+    className={`p-4 sm:p-5 rounded-2xl shadow-xl transform transition duration-300 hover:-translate-y-2 hover:shadow-lg max-w-[280px] sm:max-w-[320px] mx-auto ${bgColor} ${textColor}`}
     initial={{ opacity: 0, scale: 0.9 }}
     whileInView={{ opacity: 1, scale: 1 }}
     transition={{ duration: 0.5 }}
   >
     <div className="flex flex-col items-center text-center">
-      <div className="mb-4 p-4 rounded-full bg-white/20">
-        {React.cloneElement(icon, { className: "w-8 h-8 sm:w-10 sm:h-10" })}
+      <div className="mb-3 p-3 rounded-full bg-white/20">
+        {React.cloneElement(icon, { className: "w-7 h-7 sm:w-9 sm:h-9" })}
       </div>
-      <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">{title}</h3>
-      <p className="text-sm sm:text-base opacity-80">{description}</p>
+      <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2">{title}</h3>
+      <p className="text-xs sm:text-sm opacity-80">{description}</p>
     </div>
   </motion.div>
 );
 
 const ImpactPage = () => {
   return (
-    <section id="impact" className="bg-gradient-to-br from-indigo-50 to-cyan-100 min-h-screen scroll-mt-[6rem] pt-10 pb-20">
-      <div className="container mx-auto px-4">
+    <section id="impact" className="bg-blue-50 min-h-screen scroll-mt-[6rem] pt-10 pb-20">
+      <div className="container mx-auto px-4 max-w-7xl">
         {/* Header Section */}
         <motion.div 
           initial={{ opacity: 0, y: -50 }}
@@ -31,7 +31,7 @@ const ImpactPage = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-8 sm:mb-16"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-500 mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-cyan-500 mb-4">
             Impact of SmartBucket
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
@@ -40,8 +40,10 @@ const ImpactPage = () => {
         </motion.div>
 
         {/* Impact Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-16">
-          <ImpactCard
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-8 lg:px-12 mb-12 sm:mb-16 lg:mb-20">
+
+
+        <ImpactCard
             title="Health Benefits"
             icon={<ShieldCheck />}
             description="Reduces disease transmission by enhancing hand hygiene practices"
@@ -56,17 +58,17 @@ const ImpactPage = () => {
             textColor="text-green-900"
           />
           <ImpactCard
-            title="Smart Monitoring"
-            icon={<Target />}
-            description="Provides real-time insights and automated performance tracking"
+            title="Operational Efficiency "
+            icon={<TrendingDown />}
+            description="Saves costs on excessive water and soap consumption through controlled dispensing"
             bgColor="bg-purple-500/10"
             textColor="text-purple-900"
           />
         </div>
 
         {/* Detailed Impact Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-          <motion.div
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 px-6 sm:px-10 lg:px-16 xl:px-20">
+        <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
