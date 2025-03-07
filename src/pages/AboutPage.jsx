@@ -18,7 +18,7 @@ const AboutPage = () => {
     >
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-600 relative">
         <span className="relative z-10">About Us</span>
-        <span className="absolute left-1/2 -bottom-2 w-24 h-2 bg-blue-500 rounded-full transform -translate-x-1/2 animate-pulse"></span>
+        <span className="absolute left-1/2 -bottom-2 w-24 h-2 bg-sky-500 rounded-full transform -translate-x-1/2 animate-pulse"></span>
       </h1>
      
     </motion.div>
