@@ -65,19 +65,19 @@ const FeaturesPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
             <FeatureCard
               icon={Droplet}
-              title="Touchless Soap Dispenser"
+              title="Contactless Soap Dispenser"
               description="Our advanced touchless soap dispenser ensures a hygienic handwashing experience by automatically dispensing the perfect amount of soap without the need for physical contact."
               color="#3B82F6"
             />
             <FeatureCard
               icon={Waves}
-              title="Touchless Tap"
+              title="Contactless Tap"
               description="The touchless tap uses motion sensors to detect hands and dispense water seamlessly, eliminating the need to touch potentially contaminated surfaces."
               color="#06B6D4"
             />
             <FeatureCard
               icon={Wind}
-              title="Hand Dryer"
+              title="Hand Blower"
               description="The built-in hand dryer provides fast, hygienic drying with powerful airflow, ensuring a touch-free and bacteria-free experience."
               color="#3B82F6"
             />

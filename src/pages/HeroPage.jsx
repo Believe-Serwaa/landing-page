@@ -10,17 +10,17 @@ const HeroPage = () => {
   // Track typewriter completion cycles to trigger staggered text animation
   const [animationCycle, setAnimationCycle] = useState(0);
   const [showTagline, setShowTagline] = useState(true);
-
+  
   // Function to reset and restart the tagline animation
   const resetTaglineAnimation = () => {
     setShowTagline(false);
     setTimeout(() => setShowTagline(true), 50); // Brief delay before showing again
     setAnimationCycle(prev => prev + 1);
   };
-
+  
   return (
     <motion.div
-      className="relative text-white min-h-[600px] sm:min-h-[800px] md:min-h-[900px] flex items-center justify-center pt-[2rem] max-w-7xl"
+      className="relative text-white min-h-[600px] sm:min-h-[800px] md:min-h-[900px] flex items-center justify-center pt-[2rem] w-full"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -36,7 +36,7 @@ const HeroPage = () => {
       </div>
       
       {/* Centered Content */}
-      <div className="container mx-auto px-4 relative z-10 text-center mt-4 sm:mt-0 md:mt-8">
+      <div className="container mx-auto px-4 relative z-10 text-center mt-4 sm:mt-0 md:mt-8 max-w-7xl">
         <motion.div
           className="inline-block p-4 sm:p-6 md:p-8"
           initial={{ scale: 0.9, opacity: 0 }}
