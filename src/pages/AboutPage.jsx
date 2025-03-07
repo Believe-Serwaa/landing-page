@@ -14,8 +14,8 @@ const AboutPage = () => {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
-      className="mb-6 sm:mb-10"
-    >
+      className="mb-2 sm:mb-4" 
+          >
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-600 relative">
         <span className="relative z-10">About Us</span>
         <span className="absolute left-1/2 -bottom-2 w-24 h-2 bg-sky-500 rounded-full transform -translate-x-1/2 animate-pulse"></span>
@@ -25,9 +25,8 @@ const AboutPage = () => {
   </div>
 </div>
 
-
       {/* Innovator Spotlight Section */}
-      <section className="py-8 sm:py-12">
+      <section className="py-4 sm:py-8">
         <div className="container mx-auto px-4 max-w-6xl">
           {/* Section Heading - Adjusted margin-bottom */}
           <motion.h2
@@ -164,7 +163,7 @@ const AboutPage = () => {
 
       {/* Our Product Heading */}
       <motion.div
-        className="text-center mt-10 mb-12 sm:mb-16"
+        className="text-center mt-10 mb-2 sm:mb-4"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}

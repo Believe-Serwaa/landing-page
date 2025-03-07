@@ -50,9 +50,9 @@ const FeaturesPage = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-8 sm:mb-16"
+          className="text-center mb-4 sm:mb-8"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-cyan-500 mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-cyan-500 mb-2">
             Innovative Features
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
